@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflection - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
+        nav a:hover, nav a.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #764ba2;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .reflection-entry {
+            background: #f8f9ff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #764ba2;
+            transition: transform 0.3s;
+        }
+
+        .reflection-entry:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .reflection-date {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .reflection-entry p {
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+            }
+            nav a {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
+            .content-section {
+                padding: 2rem 1.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="assignments.html">Assignments</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="reflection.html" class="active">Reflection</a></li>
+            <li><a href="websites.html">Favorite Websites</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="content-section">
+            <h1>Self-Assessment & Reflection</h1>
+            
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 1 - October 14, 2025</div>
+                <p>Today's lecture on Introduction to Project Management. I found the discussion on Advantages of Using Formal Project Management particularly enlightening, as it emphasized the importance of Better control of financial, physical, and human resources</p>
+                </div>  
+            
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 2 - October 16, 2025 (blend) </div>
+             <p>  video knowledge area. understood the 10 knowledge area  </p>
+            </div>
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 3 - October 19, 2025 </div>
+                <p>  finished chapter 1, well understood of Project Portfolio Management  and the concept of Six traits of highly effective project managers  </p>
+            </div>
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 4 - October 21, 2025 </div>
+                <p> Started with chapter 2 part 1,   What Is a Systems Approach? and the  Three-Sphere Model for Systems Management</p>
+            </div>
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 5 - October 23, 2025 </div>
+                <p> Video Waterfall, well understood the definition of waterfall and examples of it  </p>
+            </div>
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 6 - October 26, 2025 </div>
+                <p>Chapter 2 part 1/2, learned about that it is good practice to divide projects into several phases Because projects operate as part of a system </p>
+            </div>
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 7 - October 28, 2025 </div>
+                <p>No lecture </p>
+            </div>
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 8 - October 30, 2025 </div>
+                <p> What is agile methodology? , learned that an iterative approach to project management, especially in software development, that focuses on delivering value in small, manageable chunks (sprints) to allow for flexibility, rapid feedback, and continuous improvement, prioritizing customer collaboration, adapting to change, and people over rigid processes and tools</p>
+            </div>
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 9 - November 2, 2025 </div>
+                <p>Chapter 2 part 2, learned well about the advantages and disadvantages </p>
+            </div>
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 10 - November 4, 2025 </div>
+                <p> System life cycle ch3</p>
+            </div>
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 11 - November 6, 2025 </div>
+                <p>Intro to scrum video 📹 , well understood about scrum </p>
+            </div>
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 12 - November 9, 2025 </div>
+                <p>Entity-Relationship Diagram (ERD) Introduction.  </p>
+            </div>
+
+             <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 13 - November 11, 2025 </div>
+                <p> Finished Entity-Relationship Diagram (ERD) Introduction , understand the concept of the ERD and the Steps involved in creating an ERD   </p>
+            </div>
+
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 14 - November 13, 2025 </div>
+                <p> Flow chart video 📹  </p>
+            </div>
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 15 - November 16, 2025 </div>
+                <p> Flow chart  </p>
+            </div>
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 16 - November 18, 2025 </div>
+                <p> No lecture </p>
+            </div>
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 17 - November 20, 2025 </div>
+                <p> Nothing   </p>
+            </div>
+
+             <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 18 - November 23, 2025 </div>
+                <p> Midterm exam    </p>
+            </div>
+
+             <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 19 - November 25, 2025 </div>
+                <p> finished SWOT   </p>
+            </div>
+
+             <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 20 - November 27, 2025 </div>
+                <p> personal SWOT analysis   </p>
+            </div>
+
+             <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 21 - November 30, 2025 </div>
+                <p> critical path   </p>
+            </div>
+
+             <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 22 - December 2, 2025 </div>
+                <p> Finished critical path   </p>
+            </div>
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 23 - December 4, 2025 </div>
+                <p> finding the critical path start ai in project  </p>
+            </div>
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 24 - December 7, 2025 </div>
+                <p> Ai in project   </p>
+            </div>
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 25 - December 11, 2025 </div>
+                <p> Read about  https://www.pm-global.co.uk/wp-content/uploads/2024/11/PartnerinFocus13.pdf  </p>
+            </div>
+
+             <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 26 - December 21, 2025 </div>
+                <p> presentation first two groups </p>
+            </div>
+
+            <div class="reflection-entry">
+                <div class="reflection-date">📅 Lecture 27 - December 23, 2025 </div>
+                <p> presentation of the projects </p>
+            </div>
+
+           
+
+            
+            
+
+           
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ghina Hasan  All rights reserved.</p>
+    </footer>
+</body>
+</html>
