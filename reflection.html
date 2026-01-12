@@ -13,121 +13,256 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #0a0a0a;
             min-height: 100vh;
-            color: #333;
-            line-height: 1.6;
+            color: #fff;
         }
 
-        nav {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        /* Header Navigation */
+        .header {
+            background: rgba(26, 31, 44, 0.95);
+            padding: 1.5rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            gap: 3rem;
         }
 
         nav a {
             text-decoration: none;
-            color: #667eea;
-            font-weight: 600;
-            transition: all 0.3s;
+            color: #fff;
+            font-weight: 500;
             font-size: 1rem;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
+            transition: color 0.3s;
         }
 
-        nav a:hover, nav a.active {
-            background: #667eea;
-            color: white;
+        nav a:hover,
+        nav a.active {
+            color: #00d9ff;
         }
 
+        /* Main Container */
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 4rem;
         }
 
-        .content-section {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 3rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-            animation: fadeIn 0.6s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        h1 {
-            color: #764ba2;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
+        .page-header {
             text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .page-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .page-title span {
+            color: #00d9ff;
+        }
+
+        .page-description {
+            color: #b8b8b8;
+            font-size: 1.2rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #00d9ff 0%, #0088ff 100%);
         }
 
         .reflection-entry {
-            background: #f8f9ff;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-            border-left: 4px solid #764ba2;
-            transition: transform 0.3s;
+            position: relative;
+            margin-bottom: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
         }
 
-        .reflection-entry:hover {
-            transform: translateX(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .reflection-entry:nth-child(even) .reflection-content {
+            order: 2;
+        }
+
+        .reflection-entry:nth-child(even) .reflection-date-box {
+            order: 1;
+            text-align: right;
+        }
+
+        .reflection-date-box {
+            position: relative;
         }
 
         .reflection-date {
-            color: #667eea;
-            font-weight: 600;
-            margin-bottom: 0.8rem;
+            display: inline-block;
+            background: linear-gradient(135deg, #00d9ff 0%, #0088ff 100%);
+            color: #0a0a0a;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-weight: 700;
             font-size: 1.1rem;
+            box-shadow: 0 5px 20px rgba(0, 217, 255, 0.4);
         }
 
-        .reflection-entry p {
-            text-align: justify;
+        .timeline-dot {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #00d9ff;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 0 8px rgba(0, 217, 255, 0.2);
+            z-index: 10;
+        }
+
+        .reflection-content {
+            background: linear-gradient(135deg, #1a1f2c 0%, #0f1419 100%);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .reflection-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            padding: 2px;
+            background: linear-gradient(135deg, #00d9ff 0%, #0088ff 100%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .reflection-content:hover::before {
+            opacity: 1;
+        }
+
+        .reflection-content:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+        }
+
+        .reflection-content h3 {
+            color: #00d9ff;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .reflection-content p {
+            color: #b8b8b8;
             line-height: 1.8;
+            text-align: justify;
         }
 
         footer {
             text-align: center;
-            padding: 2rem;
-            color: white;
+            padding: 3rem;
+            color: #888;
             font-size: 0.9rem;
+        }
+
+        @media (max-width: 968px) {
+            .header {
+                padding: 1rem 2rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1.5rem;
+            }
+
+            .container {
+                padding: 40px 2rem;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .reflection-entry {
+                grid-template-columns: 1fr;
+                padding-left: 60px;
+            }
+
+            .reflection-entry:nth-child(even) .reflection-content {
+                order: 1;
+            }
+
+            .reflection-entry:nth-child(even) .reflection-date-box {
+                order: 1;
+                text-align: left;
+            }
+
+            .reflection-date-box {
+                margin-bottom: 1rem;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
         }
 
         @media (max-width: 768px) {
             nav ul {
                 gap: 1rem;
-            }
-            nav a {
                 font-size: 0.9rem;
-                padding: 0.4rem 0.8rem;
             }
-            .content-section {
-                padding: 2rem 1.5rem;
-            }
-            h1 {
+
+            .page-title {
                 font-size: 2rem;
+            }
+
+            .reflection-entry {
+                padding-left: 40px;
+            }
+
+            .timeline-dot {
+                left: 10px;
+            }
+
+            .timeline::before {
+                left: 10px;
             }
         }
     </style>
